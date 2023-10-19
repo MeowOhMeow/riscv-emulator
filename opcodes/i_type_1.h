@@ -42,6 +42,7 @@ void execute_I_type_1(inst_t inst)
     case SLTIU:
         execute_SLTIU(inst);
         break;
+
     default:
         // Handle unknown opcode
         Panic("Unsupported instruction 0x%08x", inst.raw);

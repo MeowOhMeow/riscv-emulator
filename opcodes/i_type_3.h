@@ -10,6 +10,7 @@ void execute_I_type_3(inst_t inst)
     case JALR:
         execute_JALR(inst);
         break;
+
     default:
         Panic("Unsupported instruction 0x%08x", inst.raw);
         break;

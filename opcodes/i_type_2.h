@@ -26,6 +26,7 @@ void execute_I_type_2(inst_t inst)
     case LHU:
         execute_LHU(inst);
         break;
+
     default:
         Panic("Unsupported instruction 0x%08x", inst.raw);
         break;

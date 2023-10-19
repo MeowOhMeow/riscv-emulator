@@ -62,6 +62,12 @@ void execute_instruction(inst_t instruction)
     case I_TYPE_3:
         execute_I_type_3(instruction);
         break;
+    case I_TYPE_4:
+        execute_I_type_4(instruction);
+        break;
+    case R_TYPE:
+        execute_R_type(instruction);
+        break;
 
     default:
         // Handle unknown opcode
