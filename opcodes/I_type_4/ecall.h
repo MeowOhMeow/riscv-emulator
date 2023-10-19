@@ -7,6 +7,8 @@
 #include "../../inst.h"
 #include "../../debug.h"
 
+#define ECALL 0x0
+
 static inline void execute_ECALL(inst_t inst)
 {
     // ECALL

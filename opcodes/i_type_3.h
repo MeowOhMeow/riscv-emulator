@@ -1,17 +1,18 @@
 #ifndef I_TYPE_3_H
 #define I_TYPE_3_H
 
-#include "I_TYPE_3/ecall.h"
+#include "I_TYPE_3/jalr.h"
 
 void execute_I_type_3(inst_t inst)
 {
-    if (inst.I_TYPE.imm_11_0 == 0)
+    switch (inst.I_TYPE.func3)
     {
-        execute_ECALL(inst);
-    }
-    else
-    {
+    case JALR:
+        execute_JALR(inst);
+        break;
+    default:
         Panic("Unsupported instruction 0x%08x", inst.raw);
+        break;
     }
 }
 
