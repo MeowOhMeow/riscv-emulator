@@ -53,20 +53,20 @@ void execute_instruction(inst_t instruction)
 {
     switch (instruction.raw & 0b1111111)
     {
-    case I_TYPE_1:
+    case OP_I_TYPE_1:
         execute_I_type_1(instruction);
         break;
-    case I_TYPE_2:
+    case OP_I_TYPE_2:
         execute_I_type_2(instruction);
         break;
-    case I_TYPE_3:
+    case OP_I_TYPE_3:
         execute_I_type_3(instruction);
         break;
-    case I_TYPE_4:
+    case OP_I_TYPE_4:
         execute_I_type_4(instruction);
         break;
-    case R_TYPE:
-        execute_R_type(instruction);
+    case OP_R_TYPE:
+        execute_R_TYPE(instruction);
         break;
 
     default:
