@@ -69,22 +69,22 @@ void execute_instruction(inst_t instruction)
         execute_I_type_4(instruction);
         break;
     case OP_R_TYPE:
-        execute_R_TYPE(instruction);
+        execute_R_type(instruction);
         break;
     case OP_S_TYPE:
-        execute_S_TYPE(instruction);
+        execute_S_type(instruction);
         break;
     case OP_B_TYPE:
-        execute_B_TYPE(instruction);
+        execute_B_type(instruction);
         break;
     case OP_J_TYPE:
-        execute_J_TYPE(instruction);
+        execute_J_type(instruction);
         break;
     case OP_U_TYPE_1:
-        execute_U_TYPE_1(instruction);
+        execute_U_type_1(instruction);
         break;
     case OP_U_TYPE_2:
-        execute_U_TYPE_2(instruction);
+        execute_U_type_2(instruction);
         break;
 
     default:

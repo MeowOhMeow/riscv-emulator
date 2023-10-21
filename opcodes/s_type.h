@@ -5,7 +5,7 @@
 #include "S_type/sh.h"
 #include "S_type/sw.h"
 
-void execute_S_TYPE(inst_t inst)
+void execute_S_type(inst_t inst)
 {
     switch (inst.S_TYPE.funct3)
     {

@@ -12,7 +12,7 @@
 #include "R_type/slt.h"
 #include "R_type/sltu.h"
 
-void execute_R_TYPE(inst_t inst)
+void execute_R_type(inst_t inst)
 {
     switch (inst.R_TYPE.funct3)
     {

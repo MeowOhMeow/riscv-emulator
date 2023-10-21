@@ -3,7 +3,7 @@
 
 #include "J_type/jal.h"
 
-void execute_JAL(inst_t inst)
+void execute_J_type(inst_t inst)
 {
     execute_JAL(inst);
 }
