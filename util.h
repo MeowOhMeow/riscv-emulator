@@ -3,6 +3,7 @@
 
 #include "opcode.h"
 #include "inst.h"
+#include "stdio.h"
 
 /* util functions */
 long fsize(FILE *fp)
@@ -20,7 +21,7 @@ long fsize(FILE *fp)
 
 void load_program(char *file_name)
 {
-    FILE *fp = fopen(file_name, "r");
+    FILE *fp = fopen(file_name, "rb");
     Perror(fp != NULL, "Fail to open the file");
     long size = fsize(fp);
     Assert(size <= MEM_SIZE, "The size of the test program is larger than CPU memory");
