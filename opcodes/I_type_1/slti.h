@@ -9,8 +9,7 @@
 
 static inline void execute_SLTI(inst_t inst)
 {
-    uint32_t extended = sext(inst.I_TYPE.imm_11_0, 12);
-    cpu.GPR[inst.I_TYPE.rd] = (int32_t)cpu.GPR[inst.I_TYPE.rs1] < (int32_t)extended;
+    cpu.GPR[inst.I_TYPE.rd] = (int32_t)cpu.GPR[inst.I_TYPE.rs1] < (int32_t)sext(inst.I_TYPE.imm_11_0, 12);
 }
 
 #endif // SLTI_H
