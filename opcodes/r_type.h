@@ -7,6 +7,8 @@
 #include "R_type/or.h"
 #include "R_type/and.h"
 #include "R_type/sll.h"
+#include "R_type/srl.h"
+#include "R_type/sra.h"
 
 void execute_R_TYPE(inst_t inst)
 {
@@ -30,6 +32,11 @@ void execute_R_TYPE(inst_t inst)
     case SLL:
         execute_SLL(inst);
         break;
+    case SRL_OR_SRA:
+        if (inst.R_TYPE.func7 == 0x0)
+            execute_SRL(inst);
+        else
+            execute_SRA(inst);
 
     default:
         Panic("Unsupported instruction 0x%08x", inst.raw);
