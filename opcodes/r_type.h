@@ -9,6 +9,8 @@
 #include "R_type/sll.h"
 #include "R_type/srl.h"
 #include "R_type/sra.h"
+#include "R_type/slt.h"
+#include "R_type/sltu.h"
 
 void execute_R_TYPE(inst_t inst)
 {
@@ -37,6 +39,12 @@ void execute_R_TYPE(inst_t inst)
             execute_SRL(inst);
         else
             execute_SRA(inst);
+    case SLT:
+        execute_SLT(inst);
+        break;
+    case SLTU:
+        execute_SLTU(inst);
+        break;
 
     default:
         Panic("Unsupported instruction 0x%08x", inst.raw);
