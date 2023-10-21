@@ -5,7 +5,7 @@
 
 void execute_I_type_3(inst_t inst)
 {
-    switch (inst.I_TYPE.func3)
+    switch (inst.I_TYPE.funct3)
     {
     case JALR:
         execute_JALR(inst);

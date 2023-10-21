@@ -10,17 +10,17 @@ typedef union
     {
         uint32_t opcode : 7;
         uint32_t rd : 5;
-        uint32_t func3 : 3;
+        uint32_t funct3 : 3;
         uint32_t rs1 : 5;
         uint32_t rs2 : 5;
-        uint32_t func7 : 7;
+        uint32_t funct7 : 7;
     } R_TYPE;
 
     struct
     {
         uint32_t opcode : 7;
         uint32_t rd : 5;
-        uint32_t func3 : 3;
+        uint32_t funct3 : 3;
         uint32_t rs1 : 5;
         uint32_t imm_11_0 : 12;
     } I_TYPE;
@@ -29,7 +29,7 @@ typedef union
     {
         uint32_t opcode : 7;
         uint32_t rd : 5;
-        uint32_t func3 : 3;
+        uint32_t funct3 : 3;
         uint32_t rs1 : 5;
         uint32_t rs2 : 5;
         uint32_t imm_11_5 : 7;
@@ -40,7 +40,7 @@ typedef union
         uint32_t opcode :  7;
         uint32_t imm_11 : 1;
         uint32_t imm_4_1 : 4;
-        uint32_t func3 : 3;
+        uint32_t funct3 : 3;
         uint32_t rs1 : 5;
         uint32_t rs2 : 5;
         uint32_t imm_10_5 : 6;

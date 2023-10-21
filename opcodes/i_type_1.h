@@ -13,7 +13,7 @@
 
 void execute_I_type_1(inst_t inst)
 {
-    switch (inst.I_TYPE.func3)
+    switch (inst.I_TYPE.funct3)
     {
     case ADDI:
         execute_ADDI(inst);

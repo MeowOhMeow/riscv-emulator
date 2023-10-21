@@ -14,10 +14,10 @@
 
 void execute_R_TYPE(inst_t inst)
 {
-    switch (inst.R_TYPE.func3)
+    switch (inst.R_TYPE.funct3)
     {
     case ADD_OR_SUB:
-        if (inst.R_TYPE.func7 == 0x0)
+        if (inst.R_TYPE.funct7 == 0x0)
             execute_ADD(inst);
         else
             execute_SUB(inst);
@@ -35,7 +35,7 @@ void execute_R_TYPE(inst_t inst)
         execute_SLL(inst);
         break;
     case SRL_OR_SRA:
-        if (inst.R_TYPE.func7 == 0x0)
+        if (inst.R_TYPE.funct7 == 0x0)
             execute_SRL(inst);
         else
             execute_SRA(inst);
