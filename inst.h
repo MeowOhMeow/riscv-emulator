@@ -69,7 +69,10 @@ typedef union
 
 uint32_t sext(uint32_t imm, int len)
 {
-    uint32_t mask = 1 << (len - 1);
+    // truncate imm
+    imm = imm & ((1U << len) - 1);
+    // sign extend
+    uint32_t mask = 1U << (len - 1);
     return (imm ^ mask) - mask;
 }
 
