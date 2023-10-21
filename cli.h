@@ -54,6 +54,7 @@ int cmd_tee(const char *args)
 
 int cmd_c(const char *args)
 {
+    halt = false;
     while (!halt)
     {
         execute();

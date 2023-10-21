@@ -46,9 +46,6 @@ void init(int argc, char *argv[])
         cpu.GPR[i] = 0; // Register File (reset to 0)
     }
 
-    // initialize stack
-    cpu.GPR[2] = 0x10000;
-
     /* load test program */
     load_program(file_name);
 }
