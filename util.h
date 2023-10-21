@@ -100,6 +100,7 @@ void execute()
 
     cpu.GPR[0] = 0;
     cpu.PC += 4;
+    printf("PC: 0x%08x\n", cpu.PC);
 }
 
 #endif // UTIL_H
