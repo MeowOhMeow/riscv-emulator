@@ -19,5 +19,8 @@
 #include "opcodes/r_type.h"
 #include "opcodes/s_type.h"
 #include "opcodes/b_type.h"
+#include "opcodes/j_type.h"
+#include "opcodes/u_type_1.h"
+#include "opcodes/u_type_2.h"
 
 #endif // OPCODE_H
