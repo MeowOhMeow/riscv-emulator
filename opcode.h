@@ -8,6 +8,9 @@
 #define OP_R_TYPE 0b0110011
 #define OP_S_TYPE 0b0100011
 #define OP_B_TYPE 0b1100011
+#define OP_J_TYPE 0b1101111
+#define OP_U_TYPE_1 0b0110111
+#define OP_U_TYPE_2 0b0010111
 
 #include "opcodes/i_type_1.h"
 #include "opcodes/i_type_2.h"
