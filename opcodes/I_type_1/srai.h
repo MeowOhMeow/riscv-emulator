@@ -7,7 +7,7 @@
 
 static inline void execute_SRAI(inst_t inst)
 {
-    cpu.GPR[inst.I_TYPE.rd] = (cpu.GPR[inst.I_TYPE.rs1] >> (inst.I_TYPE.imm_11_0 & 0b11111)) | (cpu.GPR[inst.I_TYPE.rs1] & 0b10000);
+    cpu.GPR[inst.I_TYPE.rd] = (int32_t)(cpu.GPR[inst.I_TYPE.rs1] >> (inst.I_TYPE.imm_11_0 & 0b11111));
 }
 
 #endif // SRAI_H
