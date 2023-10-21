@@ -7,6 +7,7 @@
 #define OP_I_TYPE_4 0b1110011
 #define OP_R_TYPE 0b0110011
 #define OP_S_TYPE 0b0100011
+#define OP_B_TYPE 0b1100011
 
 #include "opcodes/i_type_1.h"
 #include "opcodes/i_type_2.h"
@@ -14,5 +15,6 @@
 #include "opcodes/i_type_4.h"
 #include "opcodes/r_type.h"
 #include "opcodes/s_type.h"
+#include "opcodes/b_type.h"
 
 #endif // OPCODE_H
