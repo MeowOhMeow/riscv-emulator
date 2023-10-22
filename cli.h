@@ -93,7 +93,7 @@ int cmd_info(const char *args)
             printf("Register values:\n");
             for (int i = 0; i < 32; i++)
             {
-                printf("x%d: %d\n", i, cpu.GPR[i]);
+                printf("%s: x%x\n", reg_name[i], cpu.GPR[i]);
             }
         }
         else if (strcmp(args, "pc") == 0)

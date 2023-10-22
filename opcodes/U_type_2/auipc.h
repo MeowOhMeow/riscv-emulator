@@ -7,7 +7,7 @@
 
 static inline void execute_AUIPC(inst_t inst)
 {
-    cpu.GPR[inst.U_TYPE.rd] = cpu.PC + sext(inst.U_TYPE.imm_31_12 << 12, 20);
+    cpu.GPR[inst.U_TYPE.rd] = cpu.PC + (inst.U_TYPE.imm_31_12 << 12);
 }
 
 #endif // AUIPC_H

@@ -39,6 +39,7 @@ void execute_R_type(inst_t inst)
             execute_SRL(inst);
         else
             execute_SRA(inst);
+        break;
     case SLT:
         execute_SLT(inst);
         break;
