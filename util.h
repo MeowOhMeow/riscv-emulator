@@ -46,6 +46,8 @@ void init(int argc, char *argv[])
         cpu.GPR[i] = 0; // Register File (reset to 0)
     }
 
+    cpu.GPR[2] = MEM_SIZE; // set stack pointer to the end of memory
+
     /* load test program */
     load_program(file_name);
 }
@@ -94,13 +96,14 @@ void execute_instruction(inst_t instruction)
 
 void execute()
 {
+    printf("PC: 0x%08x\n", cpu.PC);
+
     Assert(cpu.PC < MEM_SIZE, "PC is out of memory...");
     inst_t instruction = *(inst_t *)(&cpu.MEM[cpu.PC]);
     execute_instruction(instruction);
 
     cpu.GPR[0] = 0;
     cpu.PC += 4;
-    printf("PC: 0x%08x\n", cpu.PC);
 }
 
 #endif // UTIL_H
