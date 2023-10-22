@@ -9,7 +9,7 @@
 
 static inline void execute_SRLI(inst_t inst)
 {
-    cpu.GPR[inst.I_TYPE.rd] = cpu.GPR[inst.I_TYPE.rs1] >> (inst.I_TYPE.imm_11_0 & 0x1F);
+    cpu.GPR[inst.I_TYPE.rd] = (uint32_t)cpu.GPR[inst.I_TYPE.rs1] >> (inst.I_TYPE.imm_11_0 & 0x1F);
 }
 
 #endif // SRLI_H

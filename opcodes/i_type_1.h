@@ -31,7 +31,7 @@ void execute_I_type_1(inst_t inst)
         execute_SLLI(inst);
         break;
     case SRLI_OR_SRAI:
-        if (inst.I_TYPE.imm_11_0 & 0b111111100000 == 0x0)
+        if ((inst.I_TYPE.imm_11_0 & 0xFE0) == 0x0)
             execute_SRLI(inst);
         else
             execute_SRAI(inst);
