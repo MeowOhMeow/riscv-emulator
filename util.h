@@ -35,7 +35,10 @@ void init(int argc, char *argv[])
     /* Check number of argument */
     Assert(argc == 3,
            "There should be 2 arguments...\n Input format should be: ./xxx.elf <entry point addr> <binary file name>");
-    uint32_t entry_point_addr = strtol(argv[1], NULL, 16); // convert string to long int
+    char input[100];
+    printf("Please input the entry point address (in hex):");
+    fgets(input, 100, stdin);
+    uint32_t entry_point_addr = strtol(input, NULL, 16);
     char *file_name = argv[2];
 
     /* initialize of the emulator */
@@ -96,8 +99,6 @@ void execute_instruction(inst_t instruction)
 
 void execute()
 {
-    printf("PC: 0x%08x\n", cpu.PC);
-
     Assert(cpu.PC < MEM_SIZE, "PC is out of memory...");
     inst_t instruction = *(inst_t *)(&cpu.MEM[cpu.PC]);
     execute_instruction(instruction);
